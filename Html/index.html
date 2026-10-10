@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshMarket App</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="/Style/style.css">
+</head>
+<body>
+
+  <!-- App Wrapper (Mobile Container) -->
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-top">
+        <div class="location-info">
+          <i class="fa-solid fa-location-dot location-icon"></i>
+          <div>
+            <span class="location-label">Entregar en</span>
+            <div class="location-address">
+              <span>Calle 45 # 12-28, Bogotá</span>
+              <i class="fa-solid fa-chevron-down arrow-icon"></i>
+            </div>
+          </div>
+        </div>
+        <button class="cart-btn-header" id="openCartBtn" aria-label="Ver carrito">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge" id="cartBadgeHeader">0</span>
+        </button>
+      </div>
+
+      <!-- Barra de Búsqueda -->
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="¿Qué necesitas comprar hoy?">
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="app-content">
+      
+      <!-- Hero Banner -->
+      <section class="hero-banner">
+        <div class="hero-text">
+          <span class="hero-tag">Oferta Semanal</span>
+          <h2>Frutas y Verduras Frescas</h2>
+          <p>Hasta <strong>30% DTO</strong> en productos seleccionados</p>
+        </div>
+        <i class="fa-solid fa-basket-shopping hero-icon"></i>
+      </section>
+
+      <!-- Categorías (Filtros Horizontales) -->
+      <section class="categories-section">
+        <div class="section-header">
+          <h3>Categorías</h3>
+        </div>
+        <div class="categories-scroll" id="categoriesContainer">
+          <!-- Inyectado por JavaScript -->
+        </div>
+      </section>
+
+      <!-- Grilla de Productos -->
+      <section class="products-section">
+        <div class="section-header">
+          <h3 id="sectionTitle">Todos los Productos</h3>
+          <span class="product-count" id="productCount">0 ítems</span>
+        </div>
+        <div class="products-grid" id="productsGrid">
+          <!-- Inyectado por JavaScript -->
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Modal Drawer del Carrito -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <div class="cart-title">
+          <i class="fa-solid fa-cart-flatbed"></i>
+          <h3>Tu Carrito</h3>
+        </div>
+        <button class="close-cart-btn" id="closeCartBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="cart-items" id="cartItemsContainer">
+        <!-- Elementos del carrito dinámicos -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="subtotalAmount">$0.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Envío</span>
+          <span id="shippingAmount">$0.00</span>
+        </div>
+        <div class="summary-line total">
+          <span>Total</span>
+          <span id="totalAmount">$0.00</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">
+          Proceder al Pago <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Bottom Navigation Bar (Estilo App Móvil) -->
+    <nav class="bottom-nav">
+      <a href="#" class="nav-item active">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fa-solid fa-grid-2"></i>
+        <span>Secciones</span>
+      </a>
+      <a href="#" class="nav-item cart-nav" id="openCartNav">
+        <div class="cart-icon-wrapper">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge" id="cartBadgeNav">0</span>
+        </div>
+        <span>Carrito</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fa-solid fa-heart"></i>
+        <span>Favoritos</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fa-solid fa-user"></i>
+        <span>Perfil</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="/Script/script.js"></script>
+</body>
+</html>
